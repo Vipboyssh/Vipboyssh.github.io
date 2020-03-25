@@ -1,0 +1,790 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+}
+.clear {
+    clear: both;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.main {
+    margin: 30px 18% 0px 18%;
+}
+h2 {
+    font-size: 140%;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    color: transparent;
+    background: linear-gradient(to right, rgb(139, 156, 255), rgb(16, 43, 196));
+    -webkit-background-clip: text;
+    transition: all .3s;
+}
+h2:hover {
+    transform: skew(10deg) rotate(10deg) scale(1.05);
+    text-shadow: 2px 15px 20px rgb(190, 190, 190);      
+}
+.col {
+    float: left;
+}
+.btn {
+    display: block;
+    width: 160px;
+    height: 40px;
+    background-color: white;
+    line-height: 40px;
+    font-size: 60%;
+    margin: 0px auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    transition: 0.2s;
+    position: relative;
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn:hover {
+    transform: translateY(-10%);
+}
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    background-color: white;
+}
+.btn:hover::after{
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0;
+}
+
+@keyframes headingTextmain{
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+}
+@keyframes headingTextsup{
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+}
+@keyframes headingTextbutton{
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*-------header-------*/
+
+header {
+    background: linear-gradient(to right bottom, rgba(166, 181, 255, 0.8), rgba(53, 83, 255, 0.8)), 
+    url("./img/image-header.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path: ellipse(78% 80% at 50% 14%);
+    height: 100vh;
+}
+header .logo img {
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 3%;
+}
+header .text-box {
+    width: 350px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-transform: uppercase;
+}
+header .text-box .btn {
+    animation: headingTextbutton 0.75s ease-out 0.75s;
+    animation-fill-mode: backwards;
+}
+header .text-box span {
+    color: white;
+    display: block;
+    line-height: 40px;
+}
+header .text-box span:nth-child(1){
+    font-size: 200%;
+    letter-spacing: 10px;
+    animation: headingTextmain 1s ease-in;
+}
+header .text-box span:nth-child(2) {
+    letter-spacing: 14px;
+    font-size: 70%;
+    animation: headingTextsup 1s ease-out;
+}
+
+/*--------ABOUNT US---------*/
+
+#section-abount {
+    height:380px;
+}
+.abount-text {
+    width: 50%;
+    padding-right: 20px;
+}
+.abount-text h3 {
+    font-size: 70%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: rgb(73, 73, 73);
+}
+.abount-text p {
+    font-size: 60%;
+    color: rgb(104, 104, 104);
+    margin-bottom: 30px;
+    line-height: 22px;
+}
+.abount-text a {
+    color: rgb(49, 49, 255);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(49, 49, 255);
+    font-size: 80%;
+    transition: .3s;
+}
+.abount-text a:hover {
+    background-color: rgb(49, 49, 255);
+    color: white;
+}
+.abount-images {
+    width: 50%;
+    position: relative;
+    height: 300px;
+}
+.abount-images img {
+    width: 200px;
+    position: absolute;
+}
+.abount-images img:nth-child(1) {
+    top: 0;
+    left: 20px;
+    box-shadow: 0px 10px 15px 0px rgb(177, 177, 177);
+    z-index: 1;
+    transition: .2s;
+}
+.abount-images img:nth-child(2) {
+    top: 30px;
+    left: 210px;
+    box-shadow: 0px 10px 15px 0px rgb(177, 177, 177);
+    z-index: 2;
+    transition: .2s;
+}
+.abount-images img:nth-child(3) {
+    top: 110px;
+    left: 60px;
+    box-shadow: 0px 10px 15px 0px rgb(177, 177, 177);
+    z-index: 3;
+    transition: .2s;
+}
+.abount-images img:nth-child(1):hover {
+    transform: scale(1.1);
+    z-index: 5;
+    border: 8px solid transparent;
+    outline: 8px solid rgb(49, 49, 255);
+}
+.abount-images img:nth-child(2):hover {
+    transform: scale(1.1);
+    z-index: 5;
+    border: 8px solid transparent;
+    outline: 8px solid rgb(49, 49, 255);
+}
+.abount-images img:nth-child(3):hover {
+    transform: scale(1.1);
+    z-index: 5;
+    border: 8px solid transparent;
+    outline: 8px solid rgb(49, 49, 255);
+}
+
+/*----------skill--------*/
+
+#section-skill {
+    background: linear-gradient(to right bottom, rgba(166, 181, 255, 0.8), rgba(53, 83, 255, 0.8)), 
+    url("./img/bacground.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    clip-path: ellipse(75% 49% at 50% 50%);
+}
+#section-skill .col{
+    margin-top: 18%;
+    width: 25%;
+}
+#section-skill .skill-box {
+    margin: 0 auto;
+    background-color: white;
+    width: 190px;
+    border-radius: 40px;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    transition: .2s;
+    cursor: pointer;
+}
+#section-skill .skill-box:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+#section-skill .skill-box i {
+    font-size: 220%;
+    color: transparent;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, rgb(231, 231, 231), rgb(53, 83, 255));
+    -webkit-background-clip: text;
+}
+#section-skill li h3 {
+    font-size: 70%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: rgb(73, 73, 73);
+}
+#section-skill li p {
+    font-size: 60%;
+    color: rgb(104, 104, 104);
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+
+/*---------our courses-----*/
+
+#section-courses {
+    margin-top: 60px;
+    height: 550px;
+}
+#section-courses .col {
+    width: 33.33333%;
+}
+.courses-box {
+    margin: 0 auto;
+    width: 240px;
+    text-align: center;
+    position: relative; 
+    perspective: 600px;
+}
+.box-before {
+    position: relative;
+    height: 350px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgb(226, 226, 226);
+    background-color: white;
+    transition: 0.8s;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.box-before .courses-header {
+    height: 170px;
+    clip-path: ellipse(78% 80% at 50% 14%);
+    background-blend-mode: screen;
+    background-size: 240px 170px;
+}
+li:nth-of-type(1) .box-before .courses-header {
+    background: linear-gradient(to right, rgb(255, 195, 85), rgb(250, 162, 0)), url("./img/courses1.jpg") no-repeat;
+}
+li:nth-of-type(2 ) .box-before .courses-header {
+    background: linear-gradient(to right, rgb(88, 88, 255), blue), url("./img/courses2.jpg") no-repeat;
+}
+li:nth-of-type(3) .box-before .courses-header {
+    background: linear-gradient(to right, rgb(0, 172, 86), rgb(0, 131, 66)), url("./img/courses3.jpg") no-repeat;
+}
+.box-before .courses-heading-text {
+    text-align: right;
+    text-transform: uppercase;
+    color: white;
+    line-height: 35px;
+    position: absolute;
+    top: 75px;
+    right: 15px;  
+    font-weight: 300;
+    font-size: 90%;
+}
+.box-before .courses-heading-text span {    
+    text-align: right;
+    padding: 10px;
+    border-radius: 30px;
+}
+li:nth-of-type(1) .box-before .courses-heading-text span {
+    background: linear-gradient(to right, rgba(255, 195, 85, 0.9), rgba(250, 162, 0, 0.9));
+}
+li:nth-of-type(2) .box-before .courses-heading-text span {
+    background: linear-gradient(to right, rgba(88, 88, 255, 0.9), rgba(0, 0, 255, 0.9));
+}
+li:nth-of-type(3) .box-before .courses-heading-text span {
+    background: linear-gradient(to right, rgba(0, 172, 86, 0.9), rgba(0, 131, 66, 0.9));
+}
+.box-before .courses-main span{
+    display: block;
+    width: 130px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 50px;
+    font-size: 60%;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+.box-before .courses-main span:nth-of-type(3) {
+    border-bottom: none;
+}
+
+.box-after {
+    height: 350px;
+    padding-top: 40px;
+    border-radius: 50px;
+    transform: rotateY(180deg);
+    transition: 0.8s;
+    backface-visibility: hidden;
+}
+li:nth-of-type(1) .box-after {
+    background: linear-gradient(to right, rgb(255, 195, 85), rgb(250, 162, 0)), url("./img/courses1.jpg") no-repeat;
+}
+li:nth-of-type(2) .box-after {
+    background: linear-gradient(to right, rgb(88, 88, 255), blue), url("./img/courses2.jpg") no-repeat;
+}
+li:nth-of-type(3) .box-after {
+    background: linear-gradient(to right, rgb(0, 172, 86), rgb(0, 131, 66)), url("./img/courses3.jpg") no-repeat;
+}
+.box-after span, .box-after p {
+    color: white;
+}
+.box-after span {
+    font-size: 70%;
+    text-transform: uppercase;
+}
+.box-after p {
+    margin-top: 10px;
+    font-size: 240%;
+    font-weight: 100;
+}
+.box-after .btn {
+    margin-top: 70px;
+}
+.courses-box:hover .box-before {
+    transform: rotateY(-180deg); 
+}
+.courses-box:hover .box-after {
+    transform: rotateY(0deg);
+}
+#section-courses >.btn {
+    background-color: rgb(49, 49, 255);
+    color: white;
+    margin-top: 60px;
+}
+#section-courses >.btn::after {
+    background-color: rgb(49, 49, 255);
+}
+#section-courses >.btn:hover {
+    transform: none;
+}
+
+/*---------testimonials---------*/
+
+#section-testimonials {
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+    background-color: gray;
+}
+#section-testimonials video{
+    opacity: 30%;
+    width: 100%;
+    height: 650px;
+}
+#section-testimonials .main {
+    width: 65vw;
+    position: absolute;
+    top: 0;
+}
+.testimonials-box {
+    width: 80%;
+    padding: 30px;
+    border-radius: 100px;
+    height: 150px;
+    box-shadow: 5px 8px 20px 0px gray;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.testimonials-box:hover figure {
+    box-shadow: 0px 0px 10px gray;
+}
+.testimonials-box:hover img {
+    filter: blur(3px) brightness(70%);
+    transform: scale(1.05);
+}
+.testimonials-box:hover figcaption {
+    opacity: 1;
+    top: 35%;
+}
+.testimonials-box:nth-of-type(2){
+    margin-bottom: 100px;
+}
+.testimonials-box figure {
+    float: left;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    transition: .3s;
+    overflow:hidden;
+}
+.testimonials-box figure img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transition: .3s;
+}
+.testimonials-box figure figcaption {
+    font-size: 70%;  
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transition: .3s;
+    opacity: 0;
+    color: white;
+}
+.testimonials-box h3 {
+    font-size: 70%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: rgb(73, 73, 73);
+    margin-top: 5px;
+    text-align: left;
+}
+.testimonials-box p {
+    font-size: 60%;
+    color: rgb(104, 104, 104);
+    margin-bottom: 30px;
+    line-height: 22px;
+    text-align: left;
+}
+#section-testimonials a {
+    color: rgb(49, 49, 255);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(49, 49, 255);
+    font-size: 80%;
+    transition: .3s;
+    margin-bottom: 100px;
+}
+#section-testimonials a:hover {
+    background-color: rgb(49, 49, 255);
+    color: white;
+}
+
+/*----------enroll---------*/
+
+#section-enroll {
+    background: linear-gradient(to right, rgb(67, 117, 255), rgb(58, 88, 255));
+    padding-top: 50px;
+    height: 500px;
+}
+.enroll-box {
+    background: url("./img/eroll.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 360px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.enroll-box form {
+    clip-path: ellipse(60% 90% at 0% 50%);
+    background-color: rgba(255, 255, 255, 0.644);
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.enroll-box h2 {
+    display: block;
+    width: 210px;
+    margin-bottom: 30px;
+}
+.enroll-box input {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.432);
+    border: 2px solid rgba(180, 180, 180, 0.425);
+    outline: none;
+    transition: .3s;
+    padding: 10px;
+}
+.enroll-box input:focus {
+    border-bottom: 5px solid orange;
+}
+.enroll-box input[type="text"] {
+    height: 40px;
+    width: 300px;
+    display: block;
+}
+.enroll-box input[type="email"] {
+    height: 40px;
+    width: 300px;
+    display: block;
+}
+.enroll-box span {
+    display: block;
+}
+.enroll-box span p {
+    float: left;
+    margin-right: 100px;
+}
+.enroll-box span input[type="radio"] {
+    margin-right: 10px;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.enroll-box span input[type="radio"]::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 4px solid hsl(240, 100%, 64%);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    transform: translate(-10%,-10%);
+}
+.enroll-box span input[type="radio"]:checked::before {
+    opacity: 1;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: hsl(240, 100%, 64%);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    transform: translate(40%,40%);
+}
+.enroll-box .btn {
+    background-color:rgb(49, 49, 255);
+    color: white;
+    float: left;
+    margin-top: 30px;
+}
+.enroll-box .btn::after {
+    background-color: rgb(49, 49, 255);
+}
+
+/*---------footer---------*/
+
+footer {
+    background-color: rgb(71, 71, 71);
+    height: 200px;
+    padding-top: 50px;
+}
+footer .logo {
+    width: 150px;  
+    height: 100px;
+    margin: 0px auto;
+}
+footer img {
+    width: 150px;  
+}
+
+/* ----------navigation------ */
+
+nav {
+    overflow: hidden;
+}
+nav input {
+    display: none;
+}
+.button-navigation {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    box-shadow: 0 0px 8px rgb(189, 189, 189);
+    z-index: 1500;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    color: rgb(116, 116, 116);
+}
+.button-navigation .icon-navigation i:nth-of-type(2) {
+    display: none;
+}
+#nav-check:checked~.button-navigation .icon-navigation i:nth-of-type(1) {
+    display: none;
+}
+#nav-check:checked~.button-navigation .icon-navigation i:nth-of-type(2) {
+    display: inline;
+}
+#background-navigation {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(74, 131, 255),rgb(45, 45, 255));
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0px 5px rgb(189, 189, 189);
+    z-index: 500;
+    transition: 1.5s;
+}
+#nav-check:checked~#background-navigation {
+    transform: scale(80);
+}
+nav ul {
+    width: 200px;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    right: 0%;
+    transform: translate(50%, -50%);
+    z-index: 1000;
+    transition: 1s;
+    opacity: 0;
+}
+nav ul li a{
+    line-height: 50px;
+    text-transform: uppercase;
+    color: white;
+    background: radial-gradient(150% 200% ellipse at 200%, white 100%, transparent);
+    padding: 10px 10px;
+    background-size: 225%;
+    transition: .5s;
+    border-radius: 30px;
+}
+nav ul li a:hover {
+    background-position: 100%;
+    color: rgb(78, 78, 78);
+}
+#nav-check:checked~ul {
+    opacity: 1;
+    right: 50%;
+    transition-delay: .2s;
+}
+
+
+/*---section-enroll-click-----*/
+
+.section-enroll-click {
+    background-color: rgba(3, 3, 3, 0.596);
+    height: 100vh;
+    padding-top: 12%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 100;
+    transition: .5s;
+}
+.section-enroll-click-box {
+    width: 800px;
+    height: 350px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+}
+.section-enroll-click-box-img {
+    width: 30%;
+    height: 300px;
+}
+.section-enroll-click-box-img img {
+    width: 265px;
+    float: left;
+}
+.section-enroll-click-box-text {
+    width: 70%;
+    padding-left: 70px;
+    padding-top: 50px;
+}
+.section-enroll-click-box-text h2 {
+    text-align: left;
+    float: left;
+    margin-bottom: 20px;
+}
+.section-enroll-click-box-text h3 {
+    clear: both;
+    font-size: 70%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: rgb(73, 73, 73);
+}
+.section-enroll-click-box-text p {
+    font-size: 60%;
+    color: rgb(104, 104, 104);
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+.section-enroll-click-box-text ul li:nth-child(1) {
+    width: 35%;
+    margin-right: 20px;
+}
+.section-enroll-click-box-text ul li:nth-child(2) {
+    width: 50%;
+}
+.section-enroll-click-box-text .btn {
+    float: left;
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+}
+.section-enroll-click-box-text .btn::after {
+    background-color: blue;
+}
+.section-enroll-click-box .close {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top:15px;
+    right:15px;
+    padding: 3px 8px; 
+    border-radius: 50%;  
+    transition: .3s;
+}
+.section-enroll-click-box .close:hover {
+    box-shadow: 0px 0px 10px gray;
+    transform: scale(1.05);
+}
+.section-enroll-click:target {
+    opacity: 1;
+    visibility: visible;
+}
+.section-enroll-click:target .section-enroll-click-box {
+    transform: scale(1.05);
+}
